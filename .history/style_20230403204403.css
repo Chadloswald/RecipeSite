@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'Patrick Hand';
+  src: url('PatrickHandSC-Regular.ttf') format('truetype');
+}
+body {
+  font-family: 'Patrick Hand', cursive;
+  margin-top: 30px 0px 0px 0px;
+  padding: 0;
+  background-image: url("lined-paper-2.png");
+ /* background-color: #FCF5E5;
+  */
+ /* border: 1px solid black;
+  */
+}
+h1 {
+  text-align: center;
+  padding: 20px 0 0 0;
+  border-bottom: 4px solid black;
+  margin: 0 300px;
+  font-size: 70px;
+}
+/* @media (max-width: 600px) {
+  h1 {
+    font-size: xx-large;
+    }
+    label {
+      font-size: larger;
+    }
+} */
+form {
+  width: 80%;
+  margin: 0 auto;
+}
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 1em;
+  font-size: 25px;
+}
+input[type="text"], textarea {
+  background-color: #FCF5E5;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5em;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+button {
+  display: block;
+  margin: 1em auto;
+  padding: 0.5em;
+  border-radius: 4px;
+  background-color: black;
+  color: #FCF5E5;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #ADD8E6;
+  color: black;
+}
+#recipe-list {
+  width: 80%;
+  margin: 1em auto;
+  font-size: 25px;
+}
