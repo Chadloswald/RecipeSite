@@ -124,13 +124,12 @@ p {
     padding: 0;
   }
   
-  /* Increase font sizes */
   h2 {
     font-size: 30px;
   }
   
   p {
-    font-size: 25px;
+    font-size: 20px;
   }
   
   /* Add page breaks between recipes */
@@ -138,6 +137,6 @@ p {
     page-break-after: always;
   }
   #recipe-list {
-    margin-left: 0; /* remove left margin */
+    margin-left: 0; 
   }
 }

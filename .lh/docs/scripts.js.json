@@ -1,0 +1,18 @@
+{
+    "sourceFile": "docs/scripts.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1682460766857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1682460766856,
+            "name": "Commit-0",
+            "content": "// Waits for the page to fully load before running any JavaScript\r\ndocument.addEventListener('DOMContentLoaded', function() {\r\n\r\n  // Gives the Save button the name \"save\" makes it a local variable\r\n  const save = document.getElementById('saveButton');\r\n\r\n  // Grabs the name, ingredients, and instructions fields from the HTML, makes them local variables\r\n  const nameInput = document.getElementById('name');\r\n  const ingredientsInput = document.getElementById('ingredients');\r\n  const instructionsInput = document.getElementById('instructions');\r\n\r\n  // Does the same with the recipe-list div\r\n  const recipeList = document.getElementById('recipe-list');\r\n\r\n  // Adds EventListener to the save button. Activates function when clicked\r\n  save.addEventListener('click', function() {\r\n\r\n    // Puts the current values of the 3 forms into the local variables\r\n    const name = nameInput.value;\r\n    const ingredients = ingredientsInput.value;\r\n    const instructions = instructionsInput.value;\r\n\r\n    // Creates elements that will be used when displaying the completed saved recipe. HTML elements\r\n    const recipe = document.createElement('div');\r\n    const recipeName = document.createElement('h2');\r\n    const recipeIngredients = document.createElement('p');\r\n    const recipeInstructions = document.createElement('p');\r\n    const recipeLine = document.createElement('div');\r\n\r\n    // This adds a class to the recipe line element. Hopefully this will help with CSS\r\n    recipeLine.classList.add('recipe-line');\r\n\r\n    // Makes sure that all recipelines are contained within the recipe container\r\n    recipe.appendChild(recipeLine);\r\n\r\n    // This sets the text content for the recipe name, ingredients, and instructions. ${} used to add all contents of ingredients/instructions variables\r\n    recipeName.innerText = name;\r\n    recipeIngredients.innerText = `Ingredients: ${ingredients}`;\r\n    recipeInstructions.innerText = `Instructions: ${instructions}`;\r\n\r\n    // These append the recipe name, ingredients, and instructions elements to the recipe element.\r\n    recipe.appendChild(recipeName);\r\n    recipe.appendChild(recipeIngredients);\r\n    recipe.appendChild(recipeInstructions);\r\n\r\n    // This appends the recipe element to the recipe list container.\r\n    recipeList.appendChild(recipe);\r\n\r\n    // This sets the display property of the recipe line to \"block\".\r\n    recipeLine.style.display = 'block';\r\n\r\n    // These clear the input fields.\r\n    nameInput.value = '';\r\n    ingredientsInput.value = '';\r\n    instructionsInput.value = '';\r\n  });\r\n\r\n  // This selects the \"Print\" button and assigns it to the \"printButton\" variable.\r\n  const printButton = document.getElementById('printButton');\r\n\r\n  // This adds an event listener to the \"Print\" button that will execute the following code when clicked.\r\n  printButton.addEventListener('click', function() {\r\n\r\n    // This triggers the print dialog.\r\n    window.print();\r\n  });\r\n\r\n});"
+        }
+    ]
+}

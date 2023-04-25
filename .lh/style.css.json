@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 41,
+            "activePatchIndex": 42,
             "patches": [
                 {
                     "date": 1680578574201,
@@ -172,6 +172,10 @@
                 {
                     "date": 1681172371969,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -136,9 +136,8 @@\n   /* Add page breaks between recipes */\r\n   .recipe:not(:last-child) {\r\n     page-break-after: always;\r\n   }\r\n-\r\n-  .recipe-line {\r\n-    margin-left: 0 !important;\r\n+  #recipe-list {\r\n+    margin-left: 0; /* remove left margin */\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1681494880241,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -123,21 +123,20 @@\n     margin: 20mm 25mm 20mm 25mm; /* top right bottom left */\r\n     padding: 0;\r\n   }\r\n   \r\n-  /* Increase font sizes */\r\n   h2 {\r\n     font-size: 30px;\r\n   }\r\n   \r\n   p {\r\n-    font-size: 25px;\r\n+    font-size: 20px;\r\n   }\r\n   \r\n   /* Add page breaks between recipes */\r\n   .recipe:not(:last-child) {\r\n     page-break-after: always;\r\n   }\r\n   #recipe-list {\r\n-    margin-left: 0; /* remove left margin */\r\n+    margin-left: 0; \r\n   }\r\n }\r\n"
                 }
             ],
             "date": 1680578574201,
