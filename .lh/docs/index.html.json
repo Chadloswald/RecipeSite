@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1682460986476,
@@ -16,6 +16,22 @@
                 {
                     "date": 1684779024744,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,9 @@\n       <textarea id=\"instructions\" name=\"instructions\"></textarea>\r\n       <br>\r\n       <button id=\"saveButton\" type=\"button\">Save Recipe</button>\r\n       <button id=\"printButton\">Print Recipes</button>\r\n+      <button id=\"emailButton\">Email Recipes</button>\r\n     </form>\r\n     <div id=\"recipe-list\">\r\n       <div class=\"recipe-line\"></div>\r\n     <div id=\"list\"></div>\r\n"
+                },
+                {
+                    "date": 1684783501501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n <!DOCTYPE html>\r\n <html lang=\"en\">\r\n   <head>\r\n     <meta charset=\"UTF-8\">\r\n+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n     <title>ChefNotes</title>\r\n     <style type=\"text/css\">\r\n     </style>\r\n     <link rel=\"stylesheet\" href=\"style.css\">\r\n"
+                },
+                {
+                    "date": 1684784364256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,10 +20,12 @@\n       <label for=\"instructions\">Instructions:</label>\r\n       <textarea id=\"instructions\" name=\"instructions\"></textarea>\r\n       <br>\r\n       <button id=\"saveButton\" type=\"button\">Save Recipe</button>\r\n-      <button id=\"printButton\">Print Recipes</button>\r\n-      <button id=\"emailButton\">Email Recipes</button>\r\n+      <div id=\"buttonContainer\">\r\n+        <button id=\"printButton\">Print Recipes</button>\r\n+        <button id=\"emailButton\">Email Recipes</button>\r\n+      </div>\r\n     </form>\r\n     <div id=\"recipe-list\">\r\n       <div class=\"recipe-line\"></div>\r\n     <div id=\"list\"></div>\r\n"
+                },
+                {
+                    "date": 1684784893528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       <label for=\"instructions\">Instructions:</label>\r\n       <textarea id=\"instructions\" name=\"instructions\"></textarea>\r\n       <br>\r\n       <button id=\"saveButton\" type=\"button\">Save Recipe</button>\r\n-      <div id=\"buttonContainer\">\r\n+      <div id=\"button-container\">\r\n         <button id=\"printButton\">Print Recipes</button>\r\n         <button id=\"emailButton\">Email Recipes</button>\r\n       </div>\r\n     </form>\r\n"
+                },
+                {
+                    "date": 1684785025545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,10 +19,10 @@\n       <br>\r\n       <label for=\"instructions\">Instructions:</label>\r\n       <textarea id=\"instructions\" name=\"instructions\"></textarea>\r\n       <br>\r\n-      <button id=\"saveButton\" type=\"button\">Save Recipe</button>\r\n-      <div id=\"button-container\">\r\n+      <div id=\"button-container\"></div>\r\n+        <button id=\"saveButton\" type=\"button\">Save Recipe</button>      \r\n         <button id=\"printButton\">Print Recipes</button>\r\n         <button id=\"emailButton\">Email Recipes</button>\r\n       </div>\r\n     </form>\r\n"
                 }
             ],
             "date": 1682460986476,

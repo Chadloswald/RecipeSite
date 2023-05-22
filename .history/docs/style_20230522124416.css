@@ -40,7 +40,7 @@ input[type="text"], textarea {
 }
 
 button {
-  /* display: block; */
+  display: block;
   margin: 1em auto;
   padding: 0.5em;
   border-radius: 4px;
@@ -56,11 +56,10 @@ button:hover {
   color: #FCF5E5;
 }
 
-.button-container {
+.buttonContainer {
   display: flex;
-  flex-direction: row;
+  /* justify-content: center; */
   align-items: center;
-  justify-content: center;
 }
 
 .button-container button {

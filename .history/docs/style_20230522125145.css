@@ -57,10 +57,9 @@ button:hover {
 }
 
 .button-container {
-  display: flex;
+  display: block;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
 }
 
 .button-container button {
