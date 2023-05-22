@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   emailButton.addEventListener('click', function() {
-    const recipient = prompt('What email address do you want to send your recipes to?');
+    const recipient = prompt('oWhat email address do you want to send your recipes to?');
     if (recipient) {
       const mailtoLink = document.createElement('a');
       mailtoLink.href = 'mailto:' + recipient + '?subject=My Saved Recipes&body=' + encodeURIComponent(recipeList.innerText);

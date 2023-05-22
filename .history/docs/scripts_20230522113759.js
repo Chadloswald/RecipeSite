@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+
   const saveButton = document.getElementById('saveButton');
   const printButton = document.getElementById('printButton');
   const emailButton = document.getElementById('emailButton');
@@ -30,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     recipe.appendChild(recipeInstructions);
 
     recipeList.appendChild(recipe);
+
     recipeLine.style.display = 'block';
 
     nameInput.value = '';
@@ -43,24 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
     printContent.innerHTML = recipeContainer;
 
     const mailtoLink = document.createElement('a');
-    mailtoLink.href = 'mailto:?subject=My Saved Recipes&body=' + encodeURIComponent(printContent.innerText);
-
-    // Create a temporary link and simulate a click
-    const tempLink = document.createElement('a');
-    tempLink.href = mailtoLink.href;
-    tempLink.style.display = 'none';
-    tempLink.target = '_blank';
-    document.body.appendChild(tempLink);
-    tempLink.click();
-    document.body.removeChild(tempLink);
+    mailtoLink.href = 'mailto: ?subject=My Saved Recipes&body=' + encodeURIComponent(printContent.innerText);
+    mailtoLink.click();
   });
 
-  emailButton.addEventListener('click', function() {
-    const recipient = prompt('What email address do you want to send your recipes to?');
-    if (recipient) {
-      const mailtoLink = document.createElement('a');
-      mailtoLink.href = 'mailto:' + recipient + '?subject=My Saved Recipes&body=' + encodeURIComponent(recipeList.innerText);
-      mailtoLink.click();
-    }
-  });
 });
