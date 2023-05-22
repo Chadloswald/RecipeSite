@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 19,
+            "activePatchIndex": 23,
             "patches": [
                 {
                     "date": 1684783836025,
@@ -84,6 +84,22 @@
                 {
                     "date": 1684785235469,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,8 +59,9 @@\n .button-container {\r\n   display: flex;\r\n   flex-direction: row;\r\n   align-items: center;\r\n+  justify-content: center;\r\n }\r\n \r\n .button-container button {\r\n   margin: 0 10px;\r\n"
+                },
+                {
+                    "date": 1684785425419,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n   border-radius: 4px;\r\n }\r\n \r\n button {\r\n-  /* display: block; */\r\n+  display: block;\r\n   margin: 1em auto;\r\n   padding: 0.5em;\r\n   border-radius: 4px;\r\n   font-size: 30px;\r\n"
+                },
+                {
+                    "date": 1684785436573,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n   border-radius: 4px;\r\n }\r\n \r\n button {\r\n-  display: block;\r\n+  /* display: block; */\r\n   margin: 1em auto;\r\n   padding: 0.5em;\r\n   border-radius: 4px;\r\n   font-size: 30px;\r\n"
+                },
+                {
+                    "date": 1684785472574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n   border-radius: 4px;\r\n }\r\n \r\n button {\r\n-  /* display: block; */\r\n+  flex-direction: row;\r\n   margin: 1em auto;\r\n   padding: 0.5em;\r\n   border-radius: 4px;\r\n   font-size: 30px;\r\n"
+                },
+                {
+                    "date": 1684785544037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -147,22 +147,19 @@\n @media screen and (max-width: 600px) {\r\n   body {\r\n     /* Modify the styles for smaller screens */\r\n     margin-top: 10px;\r\n-    /* Add any other necessary adjustments */\r\n   }\r\n \r\n   h1 {\r\n     /* Modify the styles for smaller screens */\r\n     font-size: 40px;\r\n     margin: 0 50px;\r\n-    /* Add any other necessary adjustments */\r\n   }\r\n \r\n   form {\r\n     /* Modify the styles for smaller screens */\r\n     width: 90%;\r\n-    /* Add any other necessary adjustments */\r\n   }\r\n \r\n   button {\r\n     font-size: 15px; /* Adjust the font size */\r\n"
                 }
             ],
             "date": 1684783836025,

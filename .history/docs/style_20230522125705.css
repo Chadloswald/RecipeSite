@@ -40,7 +40,7 @@ input[type="text"], textarea {
 }
 
 button {
-  flex-direction: row;
+  display: block;
   margin: 1em auto;
   padding: 0.5em;
   border-radius: 4px;
@@ -148,17 +148,20 @@ p {
   body {
     /* Modify the styles for smaller screens */
     margin-top: 10px;
+    /* Add any other necessary adjustments */
   }
 
   h1 {
     /* Modify the styles for smaller screens */
     font-size: 40px;
     margin: 0 50px;
+    /* Add any other necessary adjustments */
   }
 
   form {
     /* Modify the styles for smaller screens */
     width: 90%;
+    /* Add any other necessary adjustments */
   }
 
   button {
