@@ -3,11 +3,19 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1682460986476,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1684778494108,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,18 +3,10 @@\n   <head>\r\n     <meta charset=\"UTF-8\">\r\n     <title>ChefNotes</title>\r\n     <style type=\"text/css\">\r\n-      /* body {\r\n-      background-color: rgb(0,0,0);\r\n-      background-image: url(http://www.zingerbugimages.com/backgrounds/parchment_paper_wallpaper_texture_seamless.jpg);\r\n-      background-position: top left;\r\n-      background-repeat: repeat;\r\n-      background-attachment: fixed;\r\n-    } */\r\n     </style>\r\n     <link rel=\"stylesheet\" href=\"style.css\">\r\n-    <!-- <link rel=\"stylesheet\" href=\"/bootstrap-5.3.0-alpha3-dist/bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css\"> -->\r\n   </head>\r\n   <body>\r\n     <h1>Chef Notes</h1>\r\n     <form>\r\n@@ -28,10 +20,8 @@\n       <textarea id=\"instructions\" name=\"instructions\"></textarea>\r\n       <br>\r\n       <button id=\"saveButton\" type=\"button\">Save Recipe</button>\r\n       <button id=\"printButton\">Print Recipes</button>\r\n-\r\n-      <!-- <button onclick=\"shareByEmail()\">Share via Email</button> -->\r\n     </form>\r\n     <div id=\"recipe-list\">\r\n       <div class=\"recipe-line\"></div>\r\n     <div id=\"list\"></div>\r\n"
+                },
+                {
+                    "date": 1684779024744,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,9 @@\n       <textarea id=\"instructions\" name=\"instructions\"></textarea>\r\n       <br>\r\n       <button id=\"saveButton\" type=\"button\">Save Recipe</button>\r\n       <button id=\"printButton\">Print Recipes</button>\r\n+      <button id=\"emailButton\">Email Recipes</button>\r\n     </form>\r\n     <div id=\"recipe-list\">\r\n       <div class=\"recipe-line\"></div>\r\n     <div id=\"list\"></div>\r\n"
                 }
             ],
             "date": 1682460986476,

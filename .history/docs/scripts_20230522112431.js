@@ -34,13 +34,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
     recipeLine.style.display = 'block';
 
-    nameInput.value = '';
-    ingredientsInput.value = '';
-    instructionsInput.value = '';
+    // Clearing input fields is removed
+    // nameInput.value = '';
+    // ingredientsInput.value = '';
+    // instructionsInput.value = '';
   });
 
   printButton.addEventListener('click', function() {
-    window.print();
+    const recipeContainer = recipeList.innerHTML;
+    const printContent = document.createElement('div');
+    printContent.innerHTML = recipeContainer;
+
+    const printWindow = window.open('', '_blank');
+    printWindow.document.open();
+    printWindow.document.write(`
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <title>Print Recipes</title>
+          <style>
+            @media print {
+              /* Add the print styles here */
+              /* ... */
+            }
+          </style>
+        </head>
+        <body>
+          ${printContent.innerHTML}
+        </body>
+      </html>
+    `);
+    printWindow.document.close();
+    printWindow.print();
   });
 
 });

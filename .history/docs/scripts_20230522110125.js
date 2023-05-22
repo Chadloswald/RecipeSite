@@ -1,14 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-  const saveButton = document.getElementById('saveButton');
-  const printButton = document.getElementById('printButton');
-  const emailButton = document.getElementById('emailButton');
+  const save = document.getElementById('saveButton');
+
   const nameInput = document.getElementById('name');
   const ingredientsInput = document.getElementById('ingredients');
   const instructionsInput = document.getElementById('instructions');
+
   const recipeList = document.getElementById('recipe-list');
 
-  saveButton.addEventListener('click', function() {
+  save.addEventListener('click', function() {
+
     const name = nameInput.value;
     const ingredients = ingredientsInput.value;
     const instructions = instructionsInput.value;
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const recipeLine = document.createElement('div');
 
     recipeLine.classList.add('recipe-line');
+
     recipe.appendChild(recipeLine);
 
     recipeName.innerText = name;
@@ -38,6 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
     ingredientsInput.value = '';
     instructionsInput.value = '';
   });
+
+  const printButton = document.getElementById('printButton');
 
   printButton.addEventListener('click', function() {
     window.print();

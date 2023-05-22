@@ -43,4 +43,38 @@ document.addEventListener('DOMContentLoaded', function() {
     window.print();
   });
 
+  emailButton.addEventListener('click', function() {
+    const subject = 'Chef Notes Recipes';
+    let body = '<h1>Chef Notes</h1>';
+
+    const recipes = document.querySelectorAll('#recipe-list > div');
+
+    recipes.forEach(function(recipe) {
+      const recipeName = recipe.querySelector('h2').innerText;
+      const recipeIngredients = recipe.querySelector('p:nth-child(2)').innerText;
+      const recipeInstructions = recipe.querySelector('p:nth-child(3)').innerText;
+
+      const simplifiedRecipe = `
+        <h2>${recipeName}</h2>
+        <p><strong>Ingredients:</strong> ${recipeIngredients}</p>
+        <p><strong>Instructions:</strong> ${recipeInstructions}</p>
+        <hr>
+      `;
+
+      body += simplifiedRecipe;
+    });
+
+    const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    const tempLink = document.createElement('a');
+    tempLink.href = mailtoLink;
+    tempLink.target = '_blank';
+    tempLink.style.display = 'none';
+
+    document.body.appendChild(tempLink);
+    tempLink.click();
+
+    document.body.removeChild(tempLink);
+  });
+
 });

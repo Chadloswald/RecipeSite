@@ -34,9 +34,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     recipeLine.style.display = 'block';
 
-    nameInput.value = '';
-    ingredientsInput.value = '';
-    instructionsInput.value = '';
+    // Clearing input fields is removed
+    // nameInput.value = '';
+    // ingredientsInput.value = '';
+    // instructionsInput.value = '';
   });
 
   printButton.addEventListener('click', function() {
