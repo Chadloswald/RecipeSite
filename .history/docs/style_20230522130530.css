@@ -40,10 +40,11 @@ input[type="text"], textarea {
 }
 
 button {
-  margin: 1em auto;
+  /* flex-direction: row;
+  margin: 1em auto; */
   padding: 0.5em;
-  border-radius: 10px;
-  font-size: 20px;
+  border-radius: 5px;
+  font-size: 30px;
   border: none;
   cursor: pointer;
   background-color: #ADD8E6;

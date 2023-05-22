@@ -39,16 +39,17 @@ input[type="text"], textarea {
   border-radius: 4px;
 }
 
-button {
+/* button {
+  flex-direction: row;
   margin: 1em auto;
   padding: 0.5em;
-  border-radius: 10px;
-  font-size: 20px;
+  border-radius: 4px;
+  font-size: 30px;
   border: none;
   cursor: pointer;
   background-color: #ADD8E6;
   color: black;
-}
+} */
 
 button:hover {
   background-color: gray;

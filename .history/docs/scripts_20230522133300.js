@@ -1,5 +1,3 @@
-const recipeList = document.getElementById('recipe-list');
-
 document.addEventListener('DOMContentLoaded', function() {
 
   const save = document.getElementById('saveButton');
@@ -8,14 +6,15 @@ document.addEventListener('DOMContentLoaded', function() {
   const ingredientsInput = document.getElementById('ingredients');
   const instructionsInput = document.getElementById('instructions');
 
+  const recipeList = document.getElementById('recipe-list');
+
   save.addEventListener('click', function() {
+
     const name = nameInput.value;
     const ingredients = ingredientsInput.value;
     const instructions = instructionsInput.value;
 
     const recipe = document.createElement('div');
-    recipe.classList.add('recipe'); // Add the 'recipe' class
-
     const recipeName = document.createElement('h2');
     const recipeIngredients = document.createElement('p');
     const recipeInstructions = document.createElement('p');
@@ -52,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   emailButton.addEventListener('click', function() {
     // Get the saved recipe list
+    const recipeList = document.getElementById('recipe-list');
     const recipes = recipeList.getElementsByClassName('recipe');
 
     // Create the email body with the contents of the saved recipe list
@@ -59,8 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
     for (let i = 0; i < recipes.length; i++) {
       const recipe = recipes[i];
       const recipeName = recipe.querySelector('h2').innerText;
-      const recipeIngredients = recipe.querySelector('p:nth-of-type(1)').innerText;
-      const recipeInstructions = recipe.querySelector('p:nth-of-type(2)').innerText;
+      const recipeIngredients = recipe.querySelector('.recipe-ingredients').innerText;
+      const recipeInstructions = recipe.querySelector('.recipe-instructions').innerText;
 
       emailBody += `${recipeName}\n\nIngredients: ${recipeIngredients}\n\nInstructions: ${recipeInstructions}\n\n`;
     }

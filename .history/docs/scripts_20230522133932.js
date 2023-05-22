@@ -1,5 +1,3 @@
-const recipeList = document.getElementById('recipe-list');
-
 document.addEventListener('DOMContentLoaded', function() {
 
   const save = document.getElementById('saveButton');
@@ -7,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const nameInput = document.getElementById('name');
   const ingredientsInput = document.getElementById('ingredients');
   const instructionsInput = document.getElementById('instructions');
+
+  const recipeList = document.getElementById('recipe-list');
 
   save.addEventListener('click', function() {
     const name = nameInput.value;
