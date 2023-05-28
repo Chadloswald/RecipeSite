@@ -72,7 +72,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
   });
 
-  help.addEventListener('click', function() {    
-    window.alert("\nWelcome to Chef Notes! \nChef Notes is designed for you to quickly jot down those recipe ideas that you have on the go! Just fill in the Recipe Name, the Ingredients, and the Directions into the corresponding fields then click the Save Recipe button. \nOnce you've got a recipe or two saved up, click the Print Recipe button to open your devices print services, select a printer, then print a hard copy of your recipes \nClick the Email Recipes button to open up your device's default email client so you can send your recipes wherever they need to go!");
+  help.addEventListener('click', function() {
+    var message = "<br><br>Welcome to Chef Notes! <br>Got an idea for a recipe on the go? Enter th Name, Ingredients, and Directions into the corresponding spots in the form and hit the Save Recipe button!  "
+    window.alert(message);
   });
 });

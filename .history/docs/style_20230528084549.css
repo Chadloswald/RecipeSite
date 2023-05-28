@@ -18,15 +18,10 @@ h1 {
   font-size: 70px;
 }
 
-#help {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-}
-
 .help {
-  font-size: 14px;
-  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 form {

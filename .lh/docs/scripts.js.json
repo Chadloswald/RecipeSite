@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 20,
+            "activePatchIndex": 40,
             "patches": [
                 {
                     "date": 1682460766857,
@@ -88,6 +88,86 @@
                 {
                     "date": 1684788143025,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n+const recipeList = document.getElementById('recipe-list');\r\n+\r\n document.addEventListener('DOMContentLoaded', function() {\r\n \r\n   const save = document.getElementById('saveButton');\r\n \r\n   const nameInput = document.getElementById('name');\r\n   const ingredientsInput = document.getElementById('ingredients');\r\n   const instructionsInput = document.getElementById('instructions');\r\n \r\n-  const recipeList = document.getElementById('recipe-list');\r\n-\r\n   save.addEventListener('click', function() {\r\n     const name = nameInput.value;\r\n     const ingredients = ingredientsInput.value;\r\n     const instructions = instructionsInput.value;\r\n"
+                },
+                {
+                    "date": 1685289536176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,7 +68,13 @@\n     // Open the default email client with the populated email body\r\n     const subject = 'My Saved Recipes';\r\n     const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;\r\n     window.location.href = mailtoLink;\r\n+\r\n+    document.addEventListener('DOMContentLoaded', function() {\r\n+      const topLeftButton = document.getElementById('helpButton');\r\n+    \r\n+      topLeftButton.addEventListener('click', function() {\r\n+        alert('Button clicked!');\r\n   });\r\n \r\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685289618052,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,11 +70,14 @@\n     const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;\r\n     window.location.href = mailtoLink;\r\n \r\n     document.addEventListener('DOMContentLoaded', function() {\r\n-      const topLeftButton = document.getElementById('helpButton');\r\n+      const topLeftButton = document.getElementById('topLeftButton');\r\n     \r\n       topLeftButton.addEventListener('click', function() {\r\n         alert('Button clicked!');\r\n+      });\r\n+    });\r\n+    \r\n   });\r\n \r\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685289647608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,14 +70,14 @@\n     const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;\r\n     window.location.href = mailtoLink;\r\n \r\n     document.addEventListener('DOMContentLoaded', function() {\r\n-      const topLeftButton = document.getElementById('topLeftButton');\r\n+      const topLeftButton = document.getElementById('helpButton');\r\n     \r\n       topLeftButton.addEventListener('click', function() {\r\n         alert('Button clicked!');\r\n       });\r\n     });\r\n-    \r\n+\r\n   });\r\n \r\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685289686747,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n     const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;\r\n     window.location.href = mailtoLink;\r\n \r\n     document.addEventListener('DOMContentLoaded', function() {\r\n-      const topLeftButton = document.getElementById('helpButton');\r\n+      const topLeftButton = document.getElementById('help');\r\n     \r\n       topLeftButton.addEventListener('click', function() {\r\n         alert('Button clicked!');\r\n       });\r\n"
+                },
+                {
+                    "date": 1685289729425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,11 +70,11 @@\n     const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;\r\n     window.location.href = mailtoLink;\r\n \r\n     document.addEventListener('DOMContentLoaded', function() {\r\n-      const topLeftButton = document.getElementById('help');\r\n+      const helpButton = document.getElementById('help');\r\n     \r\n-      topLeftButton.addEventListener('click', function() {\r\n+      helpButton.addEventListener('click', function() {\r\n         alert('Button clicked!');\r\n       });\r\n     });\r\n \r\n"
+                },
+                {
+                    "date": 1685289752509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,11 +70,11 @@\n     const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;\r\n     window.location.href = mailtoLink;\r\n \r\n     document.addEventListener('DOMContentLoaded', function() {\r\n-      const helpButton = document.getElementById('help');\r\n+      const topLeftButton = document.getElementById('help');\r\n     \r\n-      helpButton.addEventListener('click', function() {\r\n+      topLeftButton.addEventListener('click', function() {\r\n         alert('Button clicked!');\r\n       });\r\n     });\r\n \r\n"
+                },
+                {
+                    "date": 1685289806830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,16 +68,16 @@\n     // Open the default email client with the populated email body\r\n     const subject = 'My Saved Recipes';\r\n     const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;\r\n     window.location.href = mailtoLink;\r\n-\r\n+  });\r\n     document.addEventListener('DOMContentLoaded', function() {\r\n       const topLeftButton = document.getElementById('help');\r\n     \r\n       topLeftButton.addEventListener('click', function() {\r\n         alert('Button clicked!');\r\n       });\r\n     });\r\n \r\n-  });\r\n+ \r\n \r\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685290111991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,16 +68,11 @@\n     // Open the default email client with the populated email body\r\n     const subject = 'My Saved Recipes';\r\n     const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;\r\n     window.location.href = mailtoLink;\r\n+    \r\n   });\r\n-    document.addEventListener('DOMContentLoaded', function() {\r\n-      const topLeftButton = document.getElementById('help');\r\n-    \r\n-      topLeftButton.addEventListener('click', function() {\r\n-        alert('Button clicked!');\r\n-      });\r\n-    });\r\n \r\n- \r\n-\r\n+  help.addEventListener('click', function() {\r\n+    alert('Button clicked!');\r\n+  });\r\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685290183609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,7 +72,7 @@\n     \r\n   });\r\n \r\n   help.addEventListener('click', function() {\r\n-    alert('Button clicked!');\r\n+    window.alert('Button clicked!');\r\n   });\r\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685290372779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,7 +72,7 @@\n     \r\n   });\r\n \r\n   help.addEventListener('click', function() {\r\n-    window.alert('Button clicked!');\r\n+    window.alert('Welcome to Chef Notes! <br>');\r\n   });\r\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685290426772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,7 +72,8 @@\n     \r\n   });\r\n \r\n   help.addEventListener('click', function() {\r\n-    window.alert('Welcome to Chef Notes! <br>');\r\n+    message = \"Welcome to Chef Notes!\"\r\n+    window.alert(message);\r\n   });\r\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685290454367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,8 +72,8 @@\n     \r\n   });\r\n \r\n   help.addEventListener('click', function() {\r\n-    message = \"Welcome to Chef Notes!\"\r\n+    message = \"<br><br>Welcome to Chef Notes!\"\r\n     window.alert(message);\r\n   });\r\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685290585086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,8 +72,8 @@\n     \r\n   });\r\n \r\n   help.addEventListener('click', function() {\r\n-    message = \"<br><br>Welcome to Chef Notes!\"\r\n+    message = \"<br><br>Welcome to Chef Notes! <br>Got an idea for a recipe on the go? Enter th Name, Ingredients, and Directions into the corresponding spots in the form and hit the Save Recipe button!  \"\r\n     window.alert(message);\r\n   });\r\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685290622428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,8 +72,8 @@\n     \r\n   });\r\n \r\n   help.addEventListener('click', function() {\r\n-    message = \"<br><br>Welcome to Chef Notes! <br>Got an idea for a recipe on the go? Enter th Name, Ingredients, and Directions into the corresponding spots in the form and hit the Save Recipe button!  \"\r\n+    var message = \"<br><br>Welcome to Chef Notes! <br>Got an idea for a recipe on the go? Enter th Name, Ingredients, and Directions into the corresponding spots in the form and hit the Save Recipe button!  \"\r\n     window.alert(message);\r\n   });\r\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685290834949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,9 +71,8 @@\n     window.location.href = mailtoLink;\r\n     \r\n   });\r\n \r\n-  help.addEventListener('click', function() {\r\n-    var message = \"<br><br>Welcome to Chef Notes! <br>Got an idea for a recipe on the go? Enter th Name, Ingredients, and Directions into the corresponding spots in the form and hit the Save Recipe button!  \"\r\n-    window.alert(message);\r\n+  help.addEventListener('click', function() {    \r\n+    window.alert(\"Welcome to Chef Notes!\");\r\n   });\r\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685290850825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,7 +72,7 @@\n     \r\n   });\r\n \r\n   help.addEventListener('click', function() {    \r\n-    window.alert(\"Welcome to Chef Notes!\");\r\n+    window.alert(\"\\nWelcome to Chef Notes!\");\r\n   });\r\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685290910335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,7 +72,7 @@\n     \r\n   });\r\n \r\n   help.addEventListener('click', function() {    \r\n-    window.alert(\"\\nWelcome to Chef Notes!\");\r\n+    window.alert(\"\\nWelcome to Chef Notes! /n/nChef Notes is designed for you to quickly jot down those recipe ideas that you have on the go!\");\r\n   });\r\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685290932511,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,7 +72,7 @@\n     \r\n   });\r\n \r\n   help.addEventListener('click', function() {    \r\n-    window.alert(\"\\nWelcome to Chef Notes! /n/nChef Notes is designed for you to quickly jot down those recipe ideas that you have on the go!\");\r\n+    window.alert(\"\\nWelcome to Chef Notes! \\n\\nChef Notes is designed for you to quickly jot down those recipe ideas that you have on the go!\");\r\n   });\r\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685291188458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,7 +72,7 @@\n     \r\n   });\r\n \r\n   help.addEventListener('click', function() {    \r\n-    window.alert(\"\\nWelcome to Chef Notes! \\n\\nChef Notes is designed for you to quickly jot down those recipe ideas that you have on the go!\");\r\n+    window.alert(\"\\nWelcome to Chef Notes! \\n\\nChef Notes is designed for you to quickly jot down those recipe ideas that you have on the go! Just fill in the Recipe Name, the Ingredients, and the Directions into the corresponding fields then click the Save Recipe button. \\nOnce you've got a recipe or two saved up, click the Print Recipe button to open your devices print services, select a printer, then print a hard copy of your recipes \\nClick the Email Recipes button to open up your device's default email client so you can send your recipes wherever they need to go!\");\r\n   });\r\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685291218506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,7 +72,7 @@\n     \r\n   });\r\n \r\n   help.addEventListener('click', function() {    \r\n-    window.alert(\"\\nWelcome to Chef Notes! \\n\\nChef Notes is designed for you to quickly jot down those recipe ideas that you have on the go! Just fill in the Recipe Name, the Ingredients, and the Directions into the corresponding fields then click the Save Recipe button. \\nOnce you've got a recipe or two saved up, click the Print Recipe button to open your devices print services, select a printer, then print a hard copy of your recipes \\nClick the Email Recipes button to open up your device's default email client so you can send your recipes wherever they need to go!\");\r\n+    window.alert(\"\\nWelcome to Chef Notes! \\nChef Notes is designed for you to quickly jot down those recipe ideas that you have on the go! Just fill in the Recipe Name, the Ingredients, and the Directions into the corresponding fields then click the Save Recipe button. \\nOnce you've got a recipe or two saved up, click the Print Recipe button to open your devices print services, select a printer, then print a hard copy of your recipes \\nClick the Email Recipes button to open up your device's default email client so you can send your recipes wherever they need to go!\");\r\n   });\r\n });\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1682460766856,

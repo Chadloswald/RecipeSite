@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 6,
+            "activePatchIndex": 15,
             "patches": [
                 {
                     "date": 1682460986476,
@@ -32,6 +32,42 @@
                 {
                     "date": 1684785025545,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,10 +19,10 @@\n       <br>\r\n       <label for=\"instructions\">Instructions:</label>\r\n       <textarea id=\"instructions\" name=\"instructions\"></textarea>\r\n       <br>\r\n-      <button id=\"saveButton\" type=\"button\">Save Recipe</button>\r\n-      <div id=\"button-container\">\r\n+      <div id=\"button-container\"></div>\r\n+        <button id=\"saveButton\" type=\"button\">Save Recipe</button>      \r\n         <button id=\"printButton\">Print Recipes</button>\r\n         <button id=\"emailButton\">Email Recipes</button>\r\n       </div>\r\n     </form>\r\n"
+                },
+                {
+                    "date": 1685288372022,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,11 @@\n     <link rel=\"stylesheet\" href=\"style.css\">\r\n   </head>\r\n   <body>\r\n     <h1>Chef Notes</h1>\r\n+    <div id=\"button-container\">\r\n+    <button id=\"instructions\">Instructions</button>\r\n+    </div>\r\n     <form>\r\n       <label for=\"name\">Recipe Name:</label>\r\n       <input type=\"text\" id=\"name\" name=\"name\">\r\n       <br>\r\n"
+                },
+                {
+                    "date": 1685288463220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     <link rel=\"stylesheet\" href=\"style.css\">\r\n   </head>\r\n   <body>\r\n     <h1>Chef Notes</h1>\r\n-    <div id=\"button-container\">\r\n+    <div id=\"helpButton\">\r\n     <button id=\"instructions\">Instructions</button>\r\n     </div>\r\n     <form>\r\n       <label for=\"name\">Recipe Name:</label>\r\n"
+                },
+                {
+                    "date": 1685288590160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     <link rel=\"stylesheet\" href=\"style.css\">\r\n   </head>\r\n   <body>\r\n     <h1>Chef Notes</h1>\r\n-    <div id=\"helpButton\">\r\n+    <div id=\"button-container\">\r\n     <button id=\"instructions\">Instructions</button>\r\n     </div>\r\n     <form>\r\n       <label for=\"name\">Recipe Name:</label>\r\n"
+                },
+                {
+                    "date": 1685288643697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n       <br>\r\n       <label for=\"instructions\">Instructions:</label>\r\n       <textarea id=\"instructions\" name=\"instructions\"></textarea>\r\n       <br>\r\n-      <div id=\"button-container\"></div>\r\n+      <div id=\"button-container\">\r\n         <button id=\"saveButton\" type=\"button\">Save Recipe</button>      \r\n         <button id=\"printButton\">Print Recipes</button>\r\n         <button id=\"emailButton\">Email Recipes</button>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1685288696689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     <link rel=\"stylesheet\" href=\"style.css\">\r\n   </head>\r\n   <body>\r\n     <h1>Chef Notes</h1>\r\n-    <div id=\"button-container\">\r\n+    <div id=\"help\">\r\n     <button id=\"instructions\">Instructions</button>\r\n     </div>\r\n     <form>\r\n       <label for=\"name\">Recipe Name:</label>\r\n"
+                },
+                {
+                    "date": 1685288831335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,12 +8,10 @@\n     </style>\r\n     <link rel=\"stylesheet\" href=\"style.css\">\r\n   </head>\r\n   <body>\r\n+    <button id=\"instructions\">Instructions</button>\r\n     <h1>Chef Notes</h1>\r\n-    <div id=\"help\">\r\n-    <button id=\"instructions\">Instructions</button>\r\n-    </div>\r\n     <form>\r\n       <label for=\"name\">Recipe Name:</label>\r\n       <input type=\"text\" id=\"name\" name=\"name\">\r\n       <br>\r\n"
+                },
+                {
+                    "date": 1685288864354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     </style>\r\n     <link rel=\"stylesheet\" href=\"style.css\">\r\n   </head>\r\n   <body>\r\n-    <button id=\"instructions\">Instructions</button>\r\n+    <button id=\"help\">Instructions</button>\r\n     <h1>Chef Notes</h1>\r\n     <form>\r\n       <label for=\"name\">Recipe Name:</label>\r\n       <input type=\"text\" id=\"name\" name=\"name\">\r\n"
+                },
+                {
+                    "date": 1685288940048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     </style>\r\n     <link rel=\"stylesheet\" href=\"style.css\">\r\n   </head>\r\n   <body>\r\n-    <button id=\"help\">Instructions</button>\r\n+    <button id=\"help\" class=\"helpButton\">Instructions</button>\r\n     <h1>Chef Notes</h1>\r\n     <form>\r\n       <label for=\"name\">Recipe Name:</label>\r\n       <input type=\"text\" id=\"name\" name=\"name\">\r\n"
+                },
+                {
+                    "date": 1685289705362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     </style>\r\n     <link rel=\"stylesheet\" href=\"style.css\">\r\n   </head>\r\n   <body>\r\n-    <button id=\"help\" class=\"helpButton\">Instructions</button>\r\n+    <button id=\"help\" class=\"help\">Instructions</button>\r\n     <h1>Chef Notes</h1>\r\n     <form>\r\n       <label for=\"name\">Recipe Name:</label>\r\n       <input type=\"text\" id=\"name\" name=\"name\">\r\n"
                 }
             ],
             "date": 1682460986476,
