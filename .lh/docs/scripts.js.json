@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 46,
+            "activePatchIndex": 48,
             "patches": [
                 {
                     "date": 1682460766857,
@@ -192,6 +192,14 @@
                 {
                     "date": 1685412610897,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,5 +81,10 @@\n \r\n   help.addEventListener('click', function() {    \r\n     window.alert(\"\\nWelcome to Chef Notes! \\nChef Notes is designed for you to quickly jot down those recipe ideas that you have on the go! Just fill in the Recipe Name, the Ingredients, and the Directions into the corresponding fields then click the Save Recipe button. \\nOnce you've got a recipe or two saved up, click the Print Recipe button to open your devices print services, select a printer, then print a hard copy of your recipes \\nClick the Email Recipes button to open up your device's default email client so you can send your recipes wherever they need to go!\");\r\n   });\r\n+  const deleteButton = document.getElementById(\"deleteButton\")\r\n+  deleteButton.addEventListener('click', function() {\r\n+    recipeList.innerHTML = '';\r\n+\r\n+  });\r\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685413735932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,12 +13,17 @@\n     document.getElementById(\"printButton\").style.display = \"inline\";\r\n     document.getElementById(\"emailButton\").style.display = \"inline\";\r\n     document.getElementById(\"deleteButton\").style.display = \"inline\";\r\n \r\n-    const name = nameInput.value;\r\n-    const ingredients = ingredientsInput.value;\r\n-    const instructions = instructionsInput.value;\r\n+    const name = nameInput.value.trim();\r\n+    const ingredients = ingredientsInput.value.trim();\r\n+    const instructions = instructionsInput.value.trim();\r\n \r\n+    if (name === '' || ingredients === '' || instructions === '') {\r\n+      alert('Please fill in all the fields before saving the recipe.');\r\n+      return\r\n+    }\r\n+\r\n     const recipe = document.createElement('div');\r\n     recipe.classList.add('recipe'); // Add the 'recipe' class\r\n \r\n     const recipeName = document.createElement('h2');\r\n"
+                },
+                {
+                    "date": 1685413787291,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,14 +7,10 @@\n   const nameInput = document.getElementById('name');\r\n   const ingredientsInput = document.getElementById('ingredients');\r\n   const instructionsInput = document.getElementById('instructions');\r\n \r\n-  save.addEventListener('click', function() {\r\n+  save.addEventListener('click', function() { \r\n \r\n-    document.getElementById(\"printButton\").style.display = \"inline\";\r\n-    document.getElementById(\"emailButton\").style.display = \"inline\";\r\n-    document.getElementById(\"deleteButton\").style.display = \"inline\";\r\n-\r\n     const name = nameInput.value.trim();\r\n     const ingredients = ingredientsInput.value.trim();\r\n     const instructions = instructionsInput.value.trim();\r\n \r\n@@ -22,8 +18,12 @@\n       alert('Please fill in all the fields before saving the recipe.');\r\n       return\r\n     }\r\n \r\n+    document.getElementById(\"printButton\").style.display = \"inline\";\r\n+    document.getElementById(\"emailButton\").style.display = \"inline\";\r\n+    document.getElementById(\"deleteButton\").style.display = \"inline\";\r\n+\r\n     const recipe = document.createElement('div');\r\n     recipe.classList.add('recipe'); // Add the 'recipe' class\r\n \r\n     const recipeName = document.createElement('h2');\r\n"
                 }
             ],
             "date": 1682460766856,

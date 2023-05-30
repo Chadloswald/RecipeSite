@@ -8,7 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const ingredientsInput = document.getElementById('ingredients');
   const instructionsInput = document.getElementById('instructions');
 
-  save.addEventListener('click', function() { 
+  save.addEventListener('click', function() {
+
+    document.getElementById("printButton").style.display = "inline";
+    document.getElementById("emailButton").style.display = "inline";
+    document.getElementById("deleteButton").style.display = "inline";
 
     const name = nameInput.value.trim();
     const ingredients = ingredientsInput.value.trim();
@@ -18,10 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
       alert('Please fill in all the fields before saving the recipe.');
       return
     }
-
-    document.getElementById("printButton").style.display = "inline";
-    document.getElementById("emailButton").style.display = "inline";
-    document.getElementById("deleteButton").style.display = "inline";
 
     const recipe = document.createElement('div');
     recipe.classList.add('recipe'); // Add the 'recipe' class
