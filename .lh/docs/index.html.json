@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 15,
+            "activePatchIndex": 16,
             "patches": [
                 {
                     "date": 1682460986476,
@@ -68,6 +68,10 @@
                 {
                     "date": 1685289705362,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     </style>\r\n     <link rel=\"stylesheet\" href=\"style.css\">\r\n   </head>\r\n   <body>\r\n-    <button id=\"help\" class=\"helpButton\">Instructions</button>\r\n+    <button id=\"help\" class=\"help\">Instructions</button>\r\n     <h1>Chef Notes</h1>\r\n     <form>\r\n       <label for=\"name\">Recipe Name:</label>\r\n       <input type=\"text\" id=\"name\" name=\"name\">\r\n"
+                },
+                {
+                    "date": 1685412349716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,9 @@\n       <div id=\"button-container\">\r\n         <button id=\"saveButton\" type=\"button\">Save Recipe</button>      \r\n         <button id=\"printButton\">Print Recipes</button>\r\n         <button id=\"emailButton\">Email Recipes</button>\r\n+        <button id=\"deleteButton\">Delete All Recipes</button>\r\n       </div>\r\n     </form>\r\n     <div id=\"recipe-list\">\r\n       <div class=\"recipe-line\"></div>\r\n"
                 }
             ],
             "date": 1682460986476,

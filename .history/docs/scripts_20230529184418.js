@@ -9,11 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const instructionsInput = document.getElementById('instructions');
 
   save.addEventListener('click', function() {
-
-    document.getElementById("printButton").style.display = "inline";
-    document.getElementById("emailButton").style.display = "inline";
-    document.getElementById("deleteButton").style.display = "inline";
-
     const name = nameInput.value;
     const ingredients = ingredientsInput.value;
     const instructions = instructionsInput.value;
@@ -71,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function() {
       emailBody += `${recipeName}\n\nIngredients: ${recipeIngredients}\n\nInstructions: ${recipeInstructions}\n\n`;
     }
 
-    event.preventDefault();
     // Open the default email client with the populated email body
     const subject = 'My Saved Recipes';
     const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
@@ -81,10 +75,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
   help.addEventListener('click', function() {    
     window.alert("\nWelcome to Chef Notes! \nChef Notes is designed for you to quickly jot down those recipe ideas that you have on the go! Just fill in the Recipe Name, the Ingredients, and the Directions into the corresponding fields then click the Save Recipe button. \nOnce you've got a recipe or two saved up, click the Print Recipe button to open your devices print services, select a printer, then print a hard copy of your recipes \nClick the Email Recipes button to open up your device's default email client so you can send your recipes wherever they need to go!");
-  });
-  const deleteButton = document.getElementById("deleteButton")
-  deleteButton.addEventListener('click', function() {
-    recipeList.innerHTML = '';
-
   });
 });

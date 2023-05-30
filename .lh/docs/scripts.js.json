@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 40,
+            "activePatchIndex": 46,
             "patches": [
                 {
                     "date": 1682460766857,
@@ -168,6 +168,30 @@
                 {
                     "date": 1685291218506,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,7 +72,7 @@\n     \r\n   });\r\n \r\n   help.addEventListener('click', function() {    \r\n-    window.alert(\"\\nWelcome to Chef Notes! \\n\\nChef Notes is designed for you to quickly jot down those recipe ideas that you have on the go! Just fill in the Recipe Name, the Ingredients, and the Directions into the corresponding fields then click the Save Recipe button. \\nOnce you've got a recipe or two saved up, click the Print Recipe button to open your devices print services, select a printer, then print a hard copy of your recipes \\nClick the Email Recipes button to open up your device's default email client so you can send your recipes wherever they need to go!\");\r\n+    window.alert(\"\\nWelcome to Chef Notes! \\nChef Notes is designed for you to quickly jot down those recipe ideas that you have on the go! Just fill in the Recipe Name, the Ingredients, and the Directions into the corresponding fields then click the Save Recipe button. \\nOnce you've got a recipe or two saved up, click the Print Recipe button to open your devices print services, select a printer, then print a hard copy of your recipes \\nClick the Email Recipes button to open up your device's default email client so you can send your recipes wherever they need to go!\");\r\n   });\r\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685411058424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,8 +45,9 @@\n   const printButton = document.getElementById('printButton');\r\n \r\n   printButton.addEventListener('click', function() {\r\n     window.print();\r\n+    event.preventDefault();\r\n   });\r\n \r\n   const emailButton = document.getElementById('emailButton');\r\n \r\n"
+                },
+                {
+                    "date": 1685411073455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,8 +65,9 @@\n \r\n       emailBody += `${recipeName}\\n\\nIngredients: ${recipeIngredients}\\n\\nInstructions: ${recipeInstructions}\\n\\n`;\r\n     }\r\n \r\n+    event.preventDefault();\r\n     // Open the default email client with the populated email body\r\n     const subject = 'My Saved Recipes';\r\n     const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;\r\n     window.location.href = mailtoLink;\r\n"
+                },
+                {
+                    "date": 1685411674615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,12 @@\n   const ingredientsInput = document.getElementById('ingredients');\r\n   const instructionsInput = document.getElementById('instructions');\r\n \r\n   save.addEventListener('click', function() {\r\n+\r\n+    document.getElementById(\"printButton\").style.display = \"block\";\r\n+    document.getElementById(\"emailButton\").style.display = \"block\";\r\n+\r\n     const name = nameInput.value;\r\n     const ingredients = ingredientsInput.value;\r\n     const instructions = instructionsInput.value;\r\n \r\n"
+                },
+                {
+                    "date": 1685411723894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,10 @@\n   const instructionsInput = document.getElementById('instructions');\r\n \r\n   save.addEventListener('click', function() {\r\n \r\n-    document.getElementById(\"printButton\").style.display = \"block\";\r\n-    document.getElementById(\"emailButton\").style.display = \"block\";\r\n+    document.getElementById(\"printButton\").style.display = \"inline\";\r\n+    document.getElementById(\"emailButton\").style.display = \"inline\";\r\n \r\n     const name = nameInput.value;\r\n     const ingredients = ingredientsInput.value;\r\n     const instructions = instructionsInput.value;\r\n"
+                },
+                {
+                    "date": 1685412368015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n   save.addEventListener('click', function() {\r\n \r\n     document.getElementById(\"printButton\").style.display = \"inline\";\r\n     document.getElementById(\"emailButton\").style.display = \"inline\";\r\n+    document.getElementById(\"deleteButton\").style.display = \"inline\";\r\n \r\n     const name = nameInput.value;\r\n     const ingredients = ingredientsInput.value;\r\n     const instructions = instructionsInput.value;\r\n"
+                },
+                {
+                    "date": 1685412610897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,5 +81,10 @@\n \r\n   help.addEventListener('click', function() {    \r\n     window.alert(\"\\nWelcome to Chef Notes! \\nChef Notes is designed for you to quickly jot down those recipe ideas that you have on the go! Just fill in the Recipe Name, the Ingredients, and the Directions into the corresponding fields then click the Save Recipe button. \\nOnce you've got a recipe or two saved up, click the Print Recipe button to open your devices print services, select a printer, then print a hard copy of your recipes \\nClick the Email Recipes button to open up your device's default email client so you can send your recipes wherever they need to go!\");\r\n   });\r\n+  const deleteButton = document.getElementById(\"deleteButton\")\r\n+  deleteButton.addEventListener('click', function() {\r\n+    recipeList.innerHTML = '';\r\n+\r\n+  });\r\n });\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1682460766856,

@@ -85,10 +85,6 @@ button:hover {
   display: none;
 }
 
-#deleteButton {
-  display: none;
-}
-
 #recipe-list {
   width: 80%;
   margin: 1em auto;
