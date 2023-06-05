@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 44,
+            "activePatchIndex": 45,
             "patches": [
                 {
                     "date": 1684783836025,
@@ -184,6 +184,10 @@
                 {
                     "date": 1685412666196,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,8 +84,12 @@\n #emailButton {\r\n   display: none;\r\n }\r\n \r\n+#deleteButton {\r\n+  display: none;\r\n+}\r\n+\r\n #recipe-list {\r\n   width: 80%;\r\n   margin: 1em auto;\r\n   font-size: 25px;\r\n"
+                },
+                {
+                    "date": 1685986165571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -250,5 +250,9 @@\n   button {\r\n     font-size: 10px; \r\n     padding: 0.1em; \r\n   }\r\n+}\r\n+\r\n+.recipe {\r\n+  word-wrap: break-word;\r\n }\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1684783836025,
