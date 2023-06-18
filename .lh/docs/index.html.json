@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 16,
+            "activePatchIndex": 26,
             "patches": [
                 {
                     "date": 1682460986476,
@@ -72,6 +72,46 @@
                 {
                     "date": 1685412349716,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,9 @@\n       <div id=\"button-container\">\r\n         <button id=\"saveButton\" type=\"button\">Save Recipe</button>      \r\n         <button id=\"printButton\">Print Recipes</button>\r\n         <button id=\"emailButton\">Email Recipes</button>\r\n+        <button id=\"deleteButton\">Delete All Recipes</button>\r\n       </div>\r\n     </form>\r\n     <div id=\"recipe-list\">\r\n       <div class=\"recipe-line\"></div>\r\n"
+                },
+                {
+                    "date": 1685988446876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,7 +31,18 @@\n     <div id=\"recipe-list\">\r\n       <div class=\"recipe-line\"></div>\r\n     <div id=\"list\"></div>\r\n     </div>\r\n+    <div id=\"modal\" class=\"modal-container\">\r\n+      <div class=\"modal-content\">\r\n+        <h2>Instructions</h2>\r\n+        <p>\r\n+          Welcome to Chef Notes! Chef Notes is designed for you to quickly jot down those recipe ideas that you have on the go! Just fill in the Recipe Name, the Ingredients, and the Directions into the corresponding fields, then click the Save Recipe button.\r\n+        </p>\r\n+        <p>\r\n+          Once you've got a recipe or two saved up, click the Print Recipe button to open your device's print services, select a printer, then print a hard copy of your recipes. Click the Email Recipes button to open up your device's default email client so you can send your recipes wherever they need to go!\r\n+        </p>\r\n+      </div>\r\n+    </div>\r\n     <script src=\"scripts.js\"></script>\r\n   </body>\r\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685988555537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,18 +31,7 @@\n     <div id=\"recipe-list\">\r\n       <div class=\"recipe-line\"></div>\r\n     <div id=\"list\"></div>\r\n     </div>\r\n-    <div id=\"modal\" class=\"modal-container\">\r\n-      <div class=\"modal-content\">\r\n-        <h2>Instructions</h2>\r\n-        <p>\r\n-          Welcome to Chef Notes! Chef Notes is designed for you to quickly jot down those recipe ideas that you have on the go! Just fill in the Recipe Name, the Ingredients, and the Directions into the corresponding fields, then click the Save Recipe button.\r\n-        </p>\r\n-        <p>\r\n-          Once you've got a recipe or two saved up, click the Print Recipe button to open your device's print services, select a printer, then print a hard copy of your recipes. Click the Email Recipes button to open up your device's default email client so you can send your recipes wherever they need to go!\r\n-        </p>\r\n-      </div>\r\n-    </div>\r\n     <script src=\"scripts.js\"></script>\r\n   </body>\r\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687102219523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,11 @@\n   </head>\r\n   <body>\r\n     <button id=\"help\" class=\"help\">Instructions</button>\r\n     <h1>Chef Notes</h1>\r\n+    <div id=\"logo\">\r\n+      <img scr=\"/CNLogo_cropped.png\" alt=\"Chef Notes Logo\">\r\n+    </div>\r\n     <form>\r\n       <label for=\"name\">Recipe Name:</label>\r\n       <input type=\"text\" id=\"name\" name=\"name\">\r\n       <br>\r\n"
+                },
+                {
+                    "date": 1687102372819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   <body>\r\n     <button id=\"help\" class=\"help\">Instructions</button>\r\n     <h1>Chef Notes</h1>\r\n     <div id=\"logo\">\r\n-      <img scr=\"/CNLogo_cropped.png\" alt=\"Chef Notes Logo\">\r\n+      <img scr=\"/docs/CNLogo_cropped.png\" alt=\"Chef Notes Logo\">\r\n     </div>\r\n     <form>\r\n       <label for=\"name\">Recipe Name:</label>\r\n       <input type=\"text\" id=\"name\" name=\"name\">\r\n"
+                },
+                {
+                    "date": 1687102492030,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   <body>\r\n     <button id=\"help\" class=\"help\">Instructions</button>\r\n     <h1>Chef Notes</h1>\r\n     <div id=\"logo\">\r\n-      <img scr=\"/docs/CNLogo_cropped.png\" alt=\"Chef Notes Logo\">\r\n+      <img src=\"/docs/CNLogo_cropped.png\" alt=\"Chef Notes Logo\">\r\n     </div>\r\n     <form>\r\n       <label for=\"name\">Recipe Name:</label>\r\n       <input type=\"text\" id=\"name\" name=\"name\">\r\n"
+                },
+                {
+                    "date": 1687102593511,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,40 @@\n+<!DOCTYPE html>\r\n+<html lang=\"en\">\r\n+  <head>\r\n+    <meta charset=\"UTF-8\">\r\n+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n+    <title>ChefNotes</title>\r\n+    <style type=\"text/css\">\r\n+    </style>\r\n+    <link rel=\"stylesheet\" href=\"style.css\">\r\n+  </head>\r\n+  <body>\r\n+    <button id=\"help\" class=\"help\">Instructions</button>\r\n+    <h1>Chef Notes</h1>\r\n+    <div id=\"logo\">\r\n+      <img src=\"/docs/images/CNLogo.png\" alt=\"Chef Notes Logo\">\r\n+    </div>\r\n+    <form>\r\n+      <label for=\"name\">Recipe Name:</label>\r\n+      <input type=\"text\" id=\"name\" name=\"name\">\r\n+      <br>\r\n+      <label for=\"ingredients\">Ingredients:</label>\r\n+      <textarea id=\"ingredients\" name=\"ingredients\"></textarea>\r\n+      <br>\r\n+      <label for=\"instructions\">Instructions:</label>\r\n+      <textarea id=\"instructions\" name=\"instructions\"></textarea>\r\n+      <br>\r\n+      <div id=\"button-container\">\r\n+        <button id=\"saveButton\" type=\"button\">Save Recipe</button>      \r\n+        <button id=\"printButton\">Print Recipes</button>\r\n+        <button id=\"emailButton\">Email Recipes</button>\r\n+        <button id=\"deleteButton\">Delete All Recipes</button>\r\n+      </div>\r\n+    </form>\r\n+    <div id=\"recipe-list\">\r\n+      <div class=\"recipe-line\"></div>\r\n+    <div id=\"list\"></div>\r\n+    </div>\r\n+    <script src=\"scripts.js\"></script>\r\n+  </body>\r\n+</html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687103450899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,45 +36,5 @@\n     <div id=\"list\"></div>\r\n     </div>\r\n     <script src=\"scripts.js\"></script>\r\n   </body>\r\n-</html>\n-<!DOCTYPE html>\r\n-<html lang=\"en\">\r\n-  <head>\r\n-    <meta charset=\"UTF-8\">\r\n-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n-    <title>ChefNotes</title>\r\n-    <style type=\"text/css\">\r\n-    </style>\r\n-    <link rel=\"stylesheet\" href=\"style.css\">\r\n-  </head>\r\n-  <body>\r\n-    <button id=\"help\" class=\"help\">Instructions</button>\r\n-    <h1>Chef Notes</h1>\r\n-    <div id=\"logo\">\r\n-      <img src=\"/docs/CNLogo_cropped.png\" alt=\"Chef Notes Logo\">\r\n-    </div>\r\n-    <form>\r\n-      <label for=\"name\">Recipe Name:</label>\r\n-      <input type=\"text\" id=\"name\" name=\"name\">\r\n-      <br>\r\n-      <label for=\"ingredients\">Ingredients:</label>\r\n-      <textarea id=\"ingredients\" name=\"ingredients\"></textarea>\r\n-      <br>\r\n-      <label for=\"instructions\">Instructions:</label>\r\n-      <textarea id=\"instructions\" name=\"instructions\"></textarea>\r\n-      <br>\r\n-      <div id=\"button-container\">\r\n-        <button id=\"saveButton\" type=\"button\">Save Recipe</button>      \r\n-        <button id=\"printButton\">Print Recipes</button>\r\n-        <button id=\"emailButton\">Email Recipes</button>\r\n-        <button id=\"deleteButton\">Delete All Recipes</button>\r\n-      </div>\r\n-    </form>\r\n-    <div id=\"recipe-list\">\r\n-      <div class=\"recipe-line\"></div>\r\n-    <div id=\"list\"></div>\r\n-    </div>\r\n-    <script src=\"scripts.js\"></script>\r\n-  </body>\r\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687103705949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   <body>\r\n     <button id=\"help\" class=\"help\">Instructions</button>\r\n     <h1>Chef Notes</h1>\r\n     <div id=\"logo\">\r\n-      <img src=\"/docs/images/CNLogo.png\" alt=\"Chef Notes Logo\">\r\n+      <img src=\"/images/CNLogo.png\" alt=\"Chef Notes Logo\">\r\n     </div>\r\n     <form>\r\n       <label for=\"name\">Recipe Name:</label>\r\n       <input type=\"text\" id=\"name\" name=\"name\">\r\n"
+                },
+                {
+                    "date": 1687103811908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   <body>\r\n     <button id=\"help\" class=\"help\">Instructions</button>\r\n     <h1>Chef Notes</h1>\r\n     <div id=\"logo\">\r\n-      <img src=\"/images/CNLogo.png\" alt=\"Chef Notes Logo\">\r\n+      <img src=\"CNLogo.png\" alt=\"Chef Notes Logo\">\r\n     </div>\r\n     <form>\r\n       <label for=\"name\">Recipe Name:</label>\r\n       <input type=\"text\" id=\"name\" name=\"name\">\r\n"
+                },
+                {
+                    "date": 1687104829873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     <link rel=\"stylesheet\" href=\"style.css\">\r\n   </head>\r\n   <body>\r\n     <button id=\"help\" class=\"help\">Instructions</button>\r\n-    <h1>Chef Notes</h1>\r\n+    <!-- <h1>Chef Notes</h1> -->\r\n     <div id=\"logo\">\r\n       <img src=\"CNLogo.png\" alt=\"Chef Notes Logo\">\r\n     </div>\r\n     <form>\r\n"
                 }
             ],
             "date": 1682460986476,

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 45,
+            "activePatchIndex": 49,
             "patches": [
                 {
                     "date": 1684783836025,
@@ -188,6 +188,22 @@
                 {
                     "date": 1685986165571,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -250,5 +250,9 @@\n   button {\r\n     font-size: 10px; \r\n     padding: 0.1em; \r\n   }\r\n+}\r\n+\r\n+.recipe {\r\n+  word-wrap: break-word;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687104800485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -118,8 +118,12 @@\n   display: block;\r\n   margin-left: 25%;\r\n }\r\n \r\n+#logo {\r\n+  text-align: center;\r\n+}\r\n+\r\n /* Printing style */\r\n @media print {\r\n   /* Remove form elements */\r\n   form {\r\n"
+                },
+                {
+                    "date": 1687104916154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -122,8 +122,15 @@\n #logo {\r\n   text-align: center;\r\n }\r\n \r\n+#logo img {\r\n+  display: block;\r\n+  margin: 0 auto;\r\n+  max-width: 200px;\r\n+  height: auto;\r\n+}\r\n+\r\n /* Printing style */\r\n @media print {\r\n   /* Remove form elements */\r\n   form {\r\n"
+                },
+                {
+                    "date": 1687104948222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,9 +125,9 @@\n \r\n #logo img {\r\n   display: block;\r\n   margin: 0 auto;\r\n-  max-width: 200px;\r\n+  max-width: 500px;\r\n   height: auto;\r\n }\r\n \r\n /* Printing style */\r\n"
+                },
+                {
+                    "date": 1687105113170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,9 @@\n \r\n form {\r\n   width: 80%;\r\n   margin: 0 auto;\r\n+  margin-top: 10px;\r\n }\r\n \r\n label {\r\n   display: block;\r\n"
                 }
             ],
             "date": 1684783836025,
