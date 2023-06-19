@@ -193,7 +193,6 @@ p {
   #logo img {
     max-width: 400px;
   }
-
   body {
     margin-top: 12px; 
   }
@@ -215,10 +214,6 @@ p {
 
 /* CSS for screens up to 600px */
 @media screen and (max-width: 600px) {
-  #logo img {
-    max-width: 600px;
-  }
-
   body {
     margin-top: 10px;
   }
@@ -240,10 +235,6 @@ p {
 
 /* CSS for screens up to 480px */
 @media screen and (max-width: 480px) {
-  #logo img {
-    max-width: 480px;
-  }
-
   body {
     margin-top: 15px;
   }
@@ -265,10 +256,6 @@ p {
 
 /* CSS for screens up to 320px */
 @media screen and (max-width: 320px) {
-  #logo img {
-    max-width: 320px;
-  }
-  
   body {
     margin-top: 20px; 
   }
