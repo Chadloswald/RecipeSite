@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="CNFavicon.png" type="image/x-icon">
     <title>ChefNotes</title>
     <style type="text/css">
     </style>
@@ -10,7 +11,10 @@
   </head>
   <body>
     <button id="help" class="help">Instructions</button>
-    <h1>Chef Notes</h1>
+    <!-- <h1>Chef Notes</h1> -->
+    <div id="logo">
+      <img src="CNLogo.png" alt="Chef Notes Logo">
+    </div>
     <form>
       <label for="name">Recipe Name:</label>
       <input type="text" id="name" name="name">
@@ -25,6 +29,7 @@
         <button id="saveButton" type="button">Save Recipe</button>      
         <button id="printButton">Print Recipes</button>
         <button id="emailButton">Email Recipes</button>
+        <button id="deleteButton">Delete All Recipes</button>
       </div>
     </form>
     <div id="recipe-list">

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 26,
+            "activePatchIndex": 28,
             "patches": [
                 {
                     "date": 1682460986476,
@@ -112,6 +112,14 @@
                 {
                     "date": 1687104829873,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     <link rel=\"stylesheet\" href=\"style.css\">\r\n   </head>\r\n   <body>\r\n     <button id=\"help\" class=\"help\">Instructions</button>\r\n-    <h1>Chef Notes</h1>\r\n+    <!-- <h1>Chef Notes</h1> -->\r\n     <div id=\"logo\">\r\n       <img src=\"CNLogo.png\" alt=\"Chef Notes Logo\">\r\n     </div>\r\n     <form>\r\n"
+                },
+                {
+                    "date": 1688333519699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n <html lang=\"en\">\r\n   <head>\r\n     <meta charset=\"UTF-8\">\r\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n+    <link rel=\"icon\" href=\"CNFavicon.png\" type=\"image/x-icon\">\r\n     <title>ChefNotes</title>\r\n     <style type=\"text/css\">\r\n     </style>\r\n     <link rel=\"stylesheet\" href=\"style.css\">\r\n"
+                },
+                {
+                    "date": 1688333535297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n <html lang=\"en\">\r\n   <head>\r\n     <meta charset=\"UTF-8\">\r\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n-    <link rel=\"icon\" href=\"CNFavicon.png\" type=\"image/x-icon\">\r\n+    <link rel=\"icon\" href=\"images/CNFavicon.png\" type=\"image/x-icon\">\r\n     <title>ChefNotes</title>\r\n     <style type=\"text/css\">\r\n     </style>\r\n     <link rel=\"stylesheet\" href=\"style.css\">\r\n"
                 }
             ],
             "date": 1682460986476,
